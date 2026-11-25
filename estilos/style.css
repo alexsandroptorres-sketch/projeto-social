@@ -9,7 +9,7 @@
 html,
 body {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: black;
 }
 
@@ -21,17 +21,24 @@ body {
 }
 
 main {
-  position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section#telefone {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: relative;
+  width: min(311px, calc(100vw - 2rem), calc((100vh - 2rem) * 0.496));
+  aspect-ratio: 311 / 627;
+  background: url("../imagens/frame-iphone.png") no-repeat center / 100% 100%;
+}
 
-    height: 627px;
-    width: 311px;
-    background: url("../imagens/frame-iphone.png") no-repeat;
+iframe#tela {
+  position: absolute;
+  top: 12.76%;
+  left: 7.07%;
+  width: 86.5%;
+  height: 75.12%;
+  border: 0;
 }
